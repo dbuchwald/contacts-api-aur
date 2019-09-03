@@ -1,4 +1,4 @@
-[Node Contacts API]
+[node-contacts-api]
 title=Node Contacts API
 description=Node Contacts API Server
 ports=8080/tcp

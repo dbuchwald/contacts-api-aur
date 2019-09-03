@@ -3,7 +3,7 @@ Description=Node.js Contacts API Sample Service
 Requires=After=mariadb.service
 
 [Service]
-ExecStart=/usr/local/bin/node /opt/node-contacts-api/node-contacts-api.js
+ExecStart=/usr/bin/node /opt/node-contacts-api/node-contacts-api.js
 # Required on some systems
 WorkingDirectory=/opt/node-contacts-api
 Restart=always

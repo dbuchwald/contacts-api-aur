@@ -1,7 +1,7 @@
 # Maintainer: Dawid Buchwald <dawid.buchwald@hotmail.com>
 
 pkgname=node-contacts-api
-pkgver=0.0.1
+pkgver=0.0.2
 pkgrel=1
 pkgdesc="Node Contacts API - sample Node.js based API for Contacts management"
 url="https://github.com/dbuchwald/node-contacts-api"
@@ -14,8 +14,8 @@ source=("$pkgname.js"
 	      "$pkgname.service"
         "ufw-$pkgname")
 sha256sums=('924509638dca8e0704811fbff4fe134b72fb53e0a072e51f8c920919ee786f0f'
-            '77f424574f243cf00ad3fe46d7aa913207ed9c77989cb011c618d0611958baf7'
-            '153f332f215ac7de9a5c2e89568bcc3e7af56ad0043b66e8f11b6114b5f3030c')
+            'a8167e7967a396415353c8e7ad9733e1b179321596a73855055174c8e6f356bb'
+            'd711dd57bc7531d9406aed6be04823cae805f2cc4e8ffd02dfb67e52ffc453aa')
 
 package() {
   cd "${srcdir}"
@@ -24,7 +24,7 @@ package() {
   install -Dm644 $pkgname.js "$pkgdir/opt/$pkgname/$pkgname.js"
 
   # service descriptor
-  install -Dm644 $pgkname.service "$pkgdir/etc/systemd/system/$pkgname.service"
+  install -Dm644 $pkgname.service "$pkgdir/usr/lib/systemd/system/$pkgname.service"
 
   # UFW application descriptor
   install -Dm644 ufw-$pkgname "$pkgdir/etc/ufw/applications.d/ufw-$pkgname"
