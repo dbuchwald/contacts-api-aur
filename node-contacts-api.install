@@ -6,7 +6,7 @@ If using UFW you need to enable inflow traffic. By default port 8080
 is used by the application. It can be edited in the service description
 file available here:
 
-  /etc/systemd/system/node-contacts-api.service
+  /usr/lib/systemd/system/node-contacts-api.service
 
 To enable traffic use:
 
