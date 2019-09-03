@@ -1,0 +1,21 @@
+[Unit]
+Description=Node.js Contacts API Sample Service
+Requires=After=mariadb.service
+
+[Service]
+ExecStart=/usr/local/bin/node /opt/node-contacts-api/node-contacts-api.js
+# Required on some systems
+WorkingDirectory=/opt/node-contacts-api
+Restart=always
+# Restart service after 10 seconds if node service crashes
+RestartSec=5
+# Output to syslog
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=node-contacts-api
+#User=<alternate user>
+#Group=<alternate group>
+Environment=NODE_ENV=production PORT=8080
+
+[Install]
+WantedBy=multi-user.target

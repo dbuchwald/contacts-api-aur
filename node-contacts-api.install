@@ -1,0 +1,26 @@
+## arg 1:  the new package version
+post_install() {
+  echo "
+
+If using UFW you need to enable inflow traffic. By default port 8080
+is used by the application. It can be edited in the service description
+file available here:
+
+  /etc/systemd/system/node-contacts-api.service
+
+To enable traffic use:
+
+  sudo ufw allow node-contacts-api
+
+To start service use:
+
+  sudo systemctl start node-contacts-api
+
+To enable automatic start with system boot use:
+
+  sudo systemctl enable node-contacts-api
+"
+}
+
+# vim:set ts=2 sw=2 et:
+
